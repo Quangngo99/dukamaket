@@ -1,0 +1,51 @@
+@import "./base.less";
+@import "./_mixi.less";
+
+.service {
+  margin-bottom: 60px;
+  .container {
+    width: 100%;
+    .service-wrap {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background-color: @white;
+      border-radius: 6px;
+      border: 1px solid @border;
+
+      .service-item {
+        padding: 35px 25px;
+        text-align: center;
+        position: relative;
+
+        &:not(:last-child)::after {
+          content: "";
+          width: 1px;
+          height: 90px;
+          background-color: @border;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        img {
+          max-width: 52px;
+          margin-bottom: 22px;
+        }
+        h4 {
+          font-size: 12px;
+          font-weight: 500;
+          color: @black;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+        }
+        p {
+          color: #666666;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

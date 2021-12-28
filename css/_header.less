@@ -1,0 +1,210 @@
+@import "./base.less";
+@import "./_mixi.less";
+
+header {
+  // top header
+  .topheader {
+    background-color: @bg-dark;
+    .border-bottom();
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .topheader-content {
+        .flex-alignIteams();
+
+        p {
+          font-size: 13px;
+          font-weight: 400;
+          strong {
+            color: @yellow;
+            font-weight: 500;
+          }
+        }
+        .topheader-content-item {
+          .flex-alignIteams();
+
+          padding: 15px 0;
+          gap: 0 20px;
+          a {
+            color: @white;
+            font-size: 13px;
+            font-weight: 400;
+          }
+          a:nth-child(3) {
+            padding-right: 20px;
+            border-right: 1px solid #303741;
+          }
+
+          .language {
+            display: flex;
+            gap: 0 20px;
+            a {
+              color: @white;
+              font-size: 13px;
+              font-weight: 400;
+              display: flex;
+              align-items: center;
+              gap: 0 10px;
+            }
+            i {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //   header container
+  .header-container {
+    background-color: @bg-dark;
+    padding: 25px 0;
+    display: flex;
+    .container {
+      width: 100%;
+    }
+
+    .header-content {
+      width: 100%;
+      .flex-alignIteams();
+      justify-content: space-between;
+      gap: 0 100px;
+    }
+
+    .header-logo {
+      img {
+        width: 221px;
+      }
+    }
+
+    .header-wrap {
+      .flex-alignIteams();
+      flex: 1;
+      p {
+        line-height: 16px;
+      }
+      .header-input {
+        position: relative;
+        .flex-alignIteams();
+        margin: 0 60px;
+        height: 45px;
+        background-color: @white;
+        border-radius: 3px;
+        flex: 1;
+
+        .header-selection {
+          .flex-alignIteams();
+          margin: 0 20px;
+          gap: 0 20px;
+          p,
+          i {
+            color: #333333;
+          }
+        }
+
+        .header-search {
+          flex: 1;
+          input {
+            color: @black;
+            border: none;
+            outline: none;
+            padding: 0 20px;
+            font-size: 13px;
+            border-left: 1px solid @border;
+            &::placeholder {
+              color: @gray;
+            }
+          }
+          i {
+            padding: 12.5px;
+            background-color: @active;
+            font-size: 20px;
+            position: absolute;
+            border-bottom-right-radius: 3px;
+            border-top-right-radius: 3px;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .header-menu {
+      .flex-alignIteams();
+      gap: 0 40px;
+      .header-menu-item {
+        .flex-alignIteams();
+
+        p:first-child {
+          i {
+            margin-left: 10px;
+          }
+        }
+
+        .header-cart {
+          position: relative;
+          margin-right: 20px;
+          i {
+            font-size: 30px;
+          }
+          span {
+            position: absolute;
+            top: -9px;
+            right: -10px;
+            font-size: 11px;
+            padding: 5px 7px;
+            background-color: @active;
+            border-radius: 50%;
+          }
+        }
+
+        p {
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  //   header nav selection
+  .header_nav-selection {
+    background-color: #232f3e;
+    .container {
+      .flex-alignIteams();
+      justify-content: space-between;
+    }
+
+    .nav-menu {
+      .flex-alignIteams();
+      gap: 0 15px;
+      padding: 14px 0;
+      i {
+        font-size: 16px;
+      }
+      p {
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 16px;
+        padding-right: 40px;
+        border-right: 1px solid #4f5965;
+      }
+    }
+
+    .header-selection {
+      flex: 1;
+      margin-left: 40px;
+      .selection-list {
+        .flex-alignIteams();
+        gap: 0 40px;
+
+        li {
+          a {
+            font-size: 14px;
+            color: @white;
+          }
+        }
+      }
+    }
+  }
+}

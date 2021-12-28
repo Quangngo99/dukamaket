@@ -1,0 +1,253 @@
+@import "./base.less";
+@import "./_mixi.less";
+
+.clothing {
+  margin-top: 60px;
+  .container {
+    padding-bottom: 60px;
+    .clothing-list {
+      .title-list();
+    }
+
+    .clothing-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      .clothing-banner {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        .clothing_banner-content {
+          width: 100%;
+          position: relative;
+          .clothing_banner-img {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+          .clothing_banner-title {
+            .banner-title();
+          }
+        }
+
+        .clothing_banner-list {
+          padding: 30px 20px;
+          background-color: @white;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+
+          .clothing_banner-wrap {
+            display: flex;
+            gap: 0 100px;
+            margin-left: 20px;
+            border-bottom: 1px solid @border;
+            .banner_list-item() {
+            }
+          }
+          .link-all {
+            color: @black;
+            font-size: 14px;
+            margin: 30px 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            transition: linear 0.3s;
+            &:hover {
+              color: @active;
+            }
+          }
+        }
+      }
+
+      .clothing-banner2 {
+        grid-column: 3/5;
+        grid-row: 1/3;
+        .product-item();
+        border-left: 1px solid @border;
+
+        .clothing-banner2-img {
+          width: 100%;
+          position: relative;
+          img {
+            width: 100%;
+          }
+
+          .label() {
+          }
+        }
+
+        .clothing-banner2-wrap {
+          .clothing-banner2-content {
+            margin-bottom: 8px;
+            p {
+              color: @blue;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 18px;
+              &:hover {
+                color: @active;
+              }
+            }
+          }
+          .clothing-banner2-evaluate {
+            .product-evaluate();
+
+            .clothing_icon-star {
+              .icon-star();
+            }
+            p {
+              font-size: 12px;
+              color: @gray;
+            }
+          }
+
+          .price {
+            .price();
+            padding-bottom: 20px;
+            border-bottom: 1px solid @border;
+            margin: 20px 0;
+            p {
+              color: @black;
+            }
+          }
+
+          .clothing-banner2-list {
+            ul {
+              padding-left: 20px;
+              li {
+                margin-bottom: 15px;
+                list-style-type: disc;
+                color: #c2c8d7;
+                a {
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: #555555;
+                  &:hover {
+                    color: @active;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .clothing-product {
+        position: relative;
+        &:hover {
+          border: none;
+          box-shadow: 0px 15px 25px rgb(94 109 0 / 20%);
+          border-radius: 6px;
+          z-index: 20;
+          transition: linear 0.3s;
+          .icon-links {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+          .clothing-button {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+        }
+
+        .clothing_product-item {
+          .product-item();
+          border-left: 1px solid @border;
+          border-bottom: 1px solid @border;
+
+          .clothing_product-img {
+            .product-img();
+            img {
+              width: 100%;
+            }
+            .label() {
+            }
+
+            .icon-links() {
+            }
+          }
+        }
+
+        .clothing_product-container {
+          .clothing_product-content {
+            margin-bottom: 8px;
+            a {
+              color: @blue;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 18px;
+              &:hover {
+                color: @active;
+              }
+            }
+          }
+
+          .clothing_product-evaluate {
+            .product-evaluate();
+
+            .clothing_icon-star {
+              .icon-star();
+            }
+            p {
+              font-size: 12px;
+              color: @gray;
+            }
+          }
+
+          .price() {
+          }
+
+          .clothing-button {
+            .product-button();
+          }
+        }
+      }
+
+      .clothing-product1 {
+        grid-column: 5/6;
+        grid-row: 1/2;
+      }
+
+      .clothing-product2 {
+        grid-column: 6/7;
+        grid-row: 1/2;
+        .price {
+          p {
+            color: @black;
+          }
+        }
+      }
+
+      .clothing-product3 {
+        grid-column: 7/8;
+        grid-row: 1/2;
+      }
+
+      .clothing-product4 {
+        grid-column: 5/6;
+        grid-row: 2/3;
+        .price {
+          p {
+            color: @black;
+          }
+        }
+      }
+
+      .clothing-product5 {
+        grid-column: 6/7;
+        grid-row: 2/3;
+      }
+
+      .clothing-product6 {
+        grid-column: 7/8;
+        grid-row: 2/3;
+        .price {
+          p {
+            color: @black;
+          }
+        }
+      }
+    }
+  }
+}

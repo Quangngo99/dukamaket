@@ -1,0 +1,57 @@
+@import "./base.less";
+@import "./_mixi.less";
+
+.news {
+  margin: 60px 0;
+  .container {
+    width: 100%;
+    .news-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0 20px;
+
+      .news-item {
+        .news_item-img {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+
+        .news_item-text {
+          padding: 25px;
+          background-color: @white;
+          border-radius: 6px;
+          border: 1px solid @border;
+          h4 {
+            font-size: 16px;
+            font-weight: 500;
+            color: @black;
+            margin-bottom: 8px;
+          }
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            color: #555555;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+          }
+          .new-link {
+            a {
+              display: flex;
+              align-items: center;
+              gap: 0 6px;
+              font-size: 14px;
+              font-weight: 400;
+              color: #3d3d3d;
+              transition: linear 0.3s;
+              &:hover {
+                color: @active;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
