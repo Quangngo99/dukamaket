@@ -1,13 +1,30 @@
 // slider
 
-$(document).ready(function () {
-  $(".slider2").slick({
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    dots: true,
-  });
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: true,
+  },
+});
+
+// deals
+
+var swiperDeals = new Swiper(".deals_product-slider", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  slidesPerView: 5,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
 });
 
 // deals count

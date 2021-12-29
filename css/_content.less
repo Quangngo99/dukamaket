@@ -10,6 +10,7 @@
     width: 100%;
     background-image: url(../img/product/background.jpg);
     display: flex;
+    position: relative;
     .deals-title {
       padding: 50px;
       padding-right: 125px;
@@ -84,7 +85,7 @@
       border-radius: 22px;
       overflow: hidden;
       .deals_product-slider {
-        display: flex;
+        position: relative;
 
         .deals_product-item {
           .product-item();
@@ -156,6 +157,29 @@
             }
           }
         }
+      }
+    }
+
+    .swiper-button-prev {
+      left: 432px;
+      &::after {
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        padding: 17px 20px;
+        background-color: @active;
+        border-radius: 50%;
+      }
+    }
+    .swiper-button-next {
+      right: -12px;
+      &::after {
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        padding: 16px 20px;
+        background-color: @active;
+        border-radius: 50%;
       }
     }
   }
