@@ -260,13 +260,24 @@
     .footer-item:first-child
     .footer-item-app
     .footer-app-content {
-    padding-right: 0;
+    padding-right: 10px;
+  }
+  .footer
+    .container
+    .footer-container
+    .footer-content:first-child
+    .footer-item:first-child
+    .footer-item-app
+    .footer-app-content
+    .app-content-text
+    p {
+    font-size: 11px;
   }
 }
 
 @media (max-width: 1399px) {
-  .footer .container .footer-container .footer-content {
-    width: unset;
+  .footer .container .footer-header .footer-header-button button {
+    padding: 17.5px 35px;
   }
 }
 @media (max-width: 1199px) {
@@ -369,7 +380,7 @@
   }
   .footer .container .footer-header .footer-header-button button {
     font-size: 10px;
-    padding: 10px 15px;
+    padding: 9.5px 15px;
   }
   .footer .container .footer-container .footer-content {
     flex-direction: column;
